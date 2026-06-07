@@ -2,60 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>For My Sinu ❤️</title>
+  <title>Sinu Surprise Game 💖</title>
   <style>
     body {
-      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      background: radial-gradient(circle, #ff4e50, #f9d423);
       font-family: 'Comic Sans MS', cursive;
       text-align: center;
-      padding: 50px;
+      padding: 40px;
+      color: #fff;
     }
     h1 {
-      color: #ff0066;
       font-size: 50px;
-      animation: heartbeat 1s infinite;
+      animation: glow 1s infinite alternate;
     }
-    @keyframes heartbeat {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-    p {
-      font-size: 22px;
-      color: #333;
-      margin: 20px;
-    }
-    .funny {
-      font-size: 20px;
-      color: #444;
-      background: #fff3cd;
-      padding: 10px;
-      border-radius: 10px;
-      display: inline-block;
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff; }
+      to { text-shadow: 0 0 30px #ff0066; }
     }
     .btn {
-      background: #ff0066;
-      color: white;
+      background: #fff;
+      color: #ff0066;
       padding: 15px 25px;
       border: none;
       border-radius: 30px;
       font-size: 20px;
       cursor: pointer;
-      margin-top: 30px;
+      margin: 15px;
       transition: 0.3s;
     }
     .btn:hover {
       background: #ff3399;
-      transform: scale(1.1);
+      color: #fff;
+      transform: scale(1.1) rotate(3deg);
+    }
+    #output {
+      font-size: 24px;
+      margin-top: 30px;
+      min-height: 50px;
     }
   </style>
 </head>
 <body>
-  <h1>💖 I Love You Sinu , my life,ummmmmm🫂♥️♥️💋💋💋💋💋💋💋💋💋💋💖🫂</h1>
-  <p>Tu meri future wife hai... aur meri duniya bhi 🌎❤️</p>
-  <p class="funny">अगर तू नाराज़ हो गई तो मैं रोज़ तुझे चॉकलेट दूँगा 🍫🫂 और परेशान sad 😐 रहूंगा , मेरी jaan</p>
-  <p class="funny">अगर तू हँस दी तो मैं दुनिया जीत गया , वो पल मेरे लिए बेस्ट होगा 🫂😍</p>
-  <p>Tu meri pyari si princess hai 👑💞</p>
-  <button class="btn" onclick="alert('Sinu, You are my forever love ❤️ Best life partnerin universe')">Click Me Sinu!</button>
+  <h1>💍 Shocking Love Game for Sinu 💍</h1>
+  <p>Ready Sinu? हर click पर कुछ नया होगा 😍😂💖</p>
+
+  <button class="btn" onclick="show('Sinu, अगर तू हाँ बोले तो मैं अभी शादी की तैयारी कर दूँगा 💍🔥')">Click for Shock 😱</button>
+  <button class="btn" onclick="show('अगर तू नाराज़ हुई तो मैं तुझे 1000 चॉकलेट भेज दूँगा 🍫🍫🍫😂')">Click for Fun 🤣</button>
+  <button class="btn" onclick="show('तेरी smile से मेरी battery 100% charge हो जाती है 🔋❤️')">Click for Romance 😍</button>
+  <button class="btn" onclick="show('Sinu, तू मेरी future wife है… अब कोई बच नहीं सकता 😘💞')">Click for Truth 💌</button>
+  <button class="btn" onclick="show('अगर तूने “I Love You” बोला तो मैं fireworks चला दूँगा 🎆🎇🔥')">Click for Fireworks 🎆</button>
+  <button class="btn" onclick="show('Surprise: मैं तुझे हर रोज़ princess की तरह treat करूँगा 👑💖')">Click for Surprise 🎁</button>
+
+  <div id="output"></div>
+
+  <script>
+    function show(msg) {
+      document.getElementById('output').innerHTML = msg;
+    }
+  </script>
 </body>
 </html>
